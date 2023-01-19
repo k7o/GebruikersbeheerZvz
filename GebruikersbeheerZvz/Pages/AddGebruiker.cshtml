@@ -1,0 +1,35 @@
+﻿@page
+@model GebruikersbeheerZvz.Pages.AddGebruikerModel
+@{
+    ViewData["Title"] = "Privacy Policy";
+}
+
+@* create form based on property AddGebruikerCommand *@
+@using (Html.BeginForm("AddGebruikerCommand", "AddGebruiker", FormMethod.Post))
+{
+    <label asp-for="AddGebruikerCommand.Voornaam"></label>
+    <input asp-for="AddGebruikerCommand.Voornaam"  />
+    <span asp-validation-for="AddGebruikerCommand.Voornaam"></span>
+
+    <label asp-for="AddGebruikerCommand.Naam"></label>
+    <input asp-for="AddGebruikerCommand.Naam"  />
+    <span asp-validation-for="AddGebruikerCommand.Naam"></span>
+
+    // tussenvoegsel
+    <label asp-for="AddGebruikerCommand.Tussenvoegsel"></label>
+    <input asp-for="AddGebruikerCommand.Tussenvoegsel"  />
+    <span asp-validation-for="AddGebruikerCommand.Tussenvoegsel"></span>
+
+    // email validate as email
+    <label asp-for="AddGebruikerCommand.Email"></label>
+    <input asp-for="AddGebruikerCommand.Email"  />
+    <span asp-validation-for="AddGebruikerCommand.Email"></span>
+    
+    // gebruikersnaam
+    <label asp-for="AddGebruikerCommand.Gebruikersnaam"></label>
+    <input asp-for="AddGebruikerCommand.Gebruikersnaam"  />
+    <span asp-validation-for="AddGebruikerCommand.Gebruikersnaam"></span>
+
+    // post
+    <input type="submit" value="Toevoegen" />
+}
